@@ -1,0 +1,68 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TinyURL | Free URL Shortner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
+
+    <script>
+        function createURL(url) {
+            document.getElementById("result").innerHTML = '<section><span class="loader-11"></span></section>';
+            var data = new FormData();
+
+            data.append("url", url);
+            data.append("alias", document.getElementById("alias").value);
+
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "create.php");
+            xhr.onload = function () {
+                document.getElementById("result").innerHTML = this.response;
+            };
+            xhr.send(data);
+            return false;
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+    <h1 style="text-align: center;">URL Shortner</h1>
+    <div class="content">
+        <form>
+            <p>Enter a long URL with http/https</p>
+            <input id="url" name="url" type="text" placeholder="Enter a long URL with http/https" onkeydown="this.classList.remove('error')"><br>
+            <p>Custom alias (optional)</p>
+            <input id="alias" name="alias" type="text" placeholder="alias"><br>
+            <input id="short" type="submit" value="Short URL">
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function copyurl(e) {
+            e.previousElementSibling.select()
+            document.execCommand('copy');
+        }
+
+        document.querySelector('form').onsubmit = (e) => {
+            e.preventDefault();
+            let URL = document.getElementById("url");
+            let url = URL.value;
+            if (!url) {
+                URL.classList.add('error');
+                return;
+            };
+            if (url.substr(0, 5) != 'http:' && url.substr(0, 6) != 'https:') {
+                url = 'https://' + url;
+            }
+            createURL(url);
+        }
+    </script>
+</body>
+
+</html>

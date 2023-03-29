@@ -1,0 +1,84 @@
+button,
+textarea,
+input {
+    transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
+}
+
+div.content {
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid silver;
+    margin: auto;
+    border-radius: 5px;
+}
+
+input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: .375rem .75rem;
+    font-size: 20px;
+    font-size: 1rem;
+    margin: 10px auto;
+}
+
+
+#url,
+#alias,
+.result {
+    width: 100%;
+    padding: 15px 8px;
+    border-radius: 5px;
+    border: 1px solid silver; 
+}
+
+input:focus {
+    border-color: #80bdff !important;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+#short {
+    width: 100%;
+    background-color: #28c98b;
+    border-color: #28c98b;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 15px 30px;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#short:hover {
+    background-color: #25d793;
+    border-color: #209e6e;
+}
+
+button.copy {
+    width: 100%;
+    background-color: dodgerblue;
+    color: #fff;
+    font-size: large;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.error {
+    border: 1px solid #FF3D00 !important;
+    position: relative !important;
+    padding-right: calc(1.5em + .75rem);
+    background-position: top calc(.375em + .1875rem) right calc(.375em + .1875rem);
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545'%3E%3Ccircle cx='6' cy='6' r='4.5'/%3E%3Cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3E%3Ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 20px;
+}
+
+.error:focus {
+    border: 1px solid #FF3D00 !important;
+    box-shadow: 0 0 0 .2rem rgb(242, 190, 190) !important;
+}
