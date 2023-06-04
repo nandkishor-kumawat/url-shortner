@@ -22,7 +22,7 @@ function createFolder() {
         $file = fopen($folderName.'/index.php', 'w');
         $txt = "<?php header('Location: $url');?>";
         fwrite($file,$txt);
-        echo "Your Shorten URL is: <br><input type='text' class='result' value='https://tiny.cu.ma/$folderName'><button onclick='copyurl(this)' class='copy'>copy url</button>";
+        echo "Your Shorten URL is: <br><input type='text' class='result' value='https://nln.cu.ma/$folderName'><button onclick='copyurl(this)' class='copy'>copy url</button>";
     }
     else {
         if($folderName==""){
