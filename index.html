@@ -31,16 +31,18 @@
 </head>
 
 <body>
+    <div class="main">
     <h1 style="text-align: center;">URL Shortner</h1>
-    <div class="content">
+    <div class="root">
         <form>
             <p>Enter a long URL with http/https</p>
-            <input id="url" name="url" type="text" placeholder="Enter a long URL with http/https" onkeydown="this.classList.remove('error')"><br>
+            <input id="url" name="url" type="url" placeholder="Enter a long URL with http/https" onkeydown="this.classList.remove('error')"><br>
             <p>Custom alias (optional)</p>
             <input id="alias" name="alias" type="text" placeholder="alias"><br>
-            <input id="short" type="submit" value="Short URL">
+            <button type="submit" class="create" id="short">Short URL</button>
         </form>
         <div id="result"></div>
+    </div>
     </div>
 
     <script>
