@@ -4,13 +4,30 @@ input {
     transition: border-color .2s ease-in-out, box-shadow .2s ease-in-out;
 }
 
-div.content {
-    max-width: 600px;
-    padding: 10px;
-    border: 1px solid silver;
+div.main {
+    /* min-width: 360px; */
+    max-width: 640px;
+    /* width: 75%; */
     margin: auto;
-    border-radius: 5px;
+    padding: 8px;
 }
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    color: #333;
+}
+
+p{
+    margin: 8px 0;
+}
+div.root {
+    padding: 10px 15px;
+    border: 1px solid #007bff;
+    margin: auto;
+}
+
 
 input {
     width: 100%;
@@ -27,7 +44,7 @@ input {
 #alias,
 .result {
     width: 100%;
-    padding: 15px 8px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid silver; 
 }
@@ -40,20 +57,22 @@ input:focus {
 
 #short {
     width: 100%;
-    background-color: #28c98b;
-    border-color: #28c98b;
-    font-weight: 700;
-    font-size: 1rem;
-    border-radius: 10px;
-    padding: 15px 30px;
-    color: #fff;
-    margin-top: 10px;
     cursor: pointer;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 22px;
+    padding: 10px;
+    background-color: #c82333f0;
+}
+
+.create:focus {
+    box-shadow: 0 0 0 .2rem rgba(225, 83, 97, 0.5);
 }
 
 #short:hover {
-    background-color: #25d793;
-    border-color: #209e6e;
+    background-color: #c82333;
 }
 
 button.copy {
